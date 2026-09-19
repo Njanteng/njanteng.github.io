@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Claudia Njanteng — Software Engineer</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTQiIGZpbGw9IiMwNjA3MGEiLz48dGV4dCB4PSIzMiIgeT0iNDMiIGZvbnQtZmFtaWx5PSJBcmlhbCwgSGVsdmV0aWNhLCBzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iOTAwIiBmb250LXNpemU9IjMwIiBmaWxsPSIjZjZmNmY1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5OQzwvdGV4dD48L3N2Zz4K">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@800;900&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #06070a;
+    --glow-a: rgba(38, 92, 232, 0.55);
+    --glow-b: rgba(20, 50, 140, 0.35);
+    --fg: #f6f6f5;
+    --fg-muted: #c7c9d1;
+    --fg-soft: #7d818f;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  *, *::before, *::after { box-sizing: inherit; }
+  html, body { height: 100%; margin: 0; }
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: 'Inter', sans-serif;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .glow {
+    position: fixed;
+    inset: -20%;
+    z-index: 0;
+    background:
+      radial-gradient(38% 42% at 74% 78%, var(--glow-a), transparent 70%),
+      radial-gradient(30% 34% at 82% 62%, var(--glow-b), transparent 70%);
+    filter: blur(40px) brightness(1);
+    opacity: 0.85;
+    animation: drift 16s ease-in-out infinite alternate, pulse 5s ease-in-out infinite;
+    pointer-events: none;
+  }
+
+  @keyframes drift {
+    0%   { transform: translate(0, 0) scale(1); }
+    50%  { transform: translate(-2%, -3%) scale(1.08); }
+    100% { transform: translate(1%, 2%) scale(1.02); }
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 0.7; filter: blur(40px) brightness(0.9); }
+    50%      { opacity: 1;   filter: blur(40px) brightness(1.25); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .glow { animation: none; opacity: 0.85; }
+  }
+
+  main {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 8vh 8vw;
+  }
+
+  .name {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 900;
+    font-size: clamp(2.6rem, 9vw, 6.5rem);
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+    margin: 0;
+    color: var(--fg);
+  }
+
+  .role {
+    margin-top: 0.9rem;
+    font-size: clamp(1rem, 2.2vw, 1.3rem);
+    font-weight: 500;
+    color: var(--fg-muted);
+  }
+
+  .tag {
+    margin-top: 1.6rem;
+    font-size: clamp(0.85rem, 1.6vw, 1rem);
+    color: var(--fg-soft);
+    max-width: 34ch;
+    line-height: 1.5;
+  }
+</style>
+</head>
+<body>
+  <div class="glow" aria-hidden="true"></div>
+  <main>
+    <p class="name">Claudia Njanteng</p>
+    <p class="role">Software Engineer</p>
+    <p class="tag">"Make something people want." ~ Paul Graham</p>
+  </main>
+</body>
+</html>
