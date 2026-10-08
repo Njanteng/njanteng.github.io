@@ -1,13 +1,34 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Claudia Njanteng — Software Engineer</title>
+<meta name="description" content="Claudia Njanteng — Software Engineer. Make something people want.">
+<meta name="author" content="Claudia Njanteng">
+<meta name="theme-color" content="#06070a">
+<link rel="canonical" href="https://njanteng.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://njanteng.com/">
+<meta property="og:site_name" content="Claudia Njanteng">
+<meta property="og:title" content="Claudia Njanteng — Software Engineer">
+<meta property="og:description" content="Make something people want.">
+<meta property="og:image" content="https://njanteng.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Claudia Njanteng — Software Engineer">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@njanteng">
+<meta name="twitter:title" content="Claudia Njanteng — Software Engineer">
+<meta name="twitter:description" content="Make something people want.">
+<meta name="twitter:image" content="https://njanteng.com/og-image.png">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Claudia Njanteng","jobTitle":"Software Engineer","url":"https://njanteng.com/","sameAs":["https://x.com/njanteng","https://github.com/njanteng","https://www.linkedin.com/in/njanteng"]}
+</script>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTQiIGZpbGw9IiMwNjA3MGEiLz48dGV4dCB4PSIzMiIgeT0iNDMiIGZvbnQtZmFtaWx5PSJBcmlhbCwgSGVsdmV0aWNhLCBzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iOTAwIiBmb250LXNpemU9IjMwIiBmaWxsPSIjZjZmNmY1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5OQzwvdGV4dD48L3N2Zz4K">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@800;900&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@900&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root {
     --bg: #06070a;
@@ -26,7 +47,7 @@
     background: var(--bg);
     color: var(--fg);
     font-family: 'Inter', sans-serif;
-    overflow: hidden;
+    overflow-x: hidden;
     position: relative;
   }
 
@@ -61,7 +82,8 @@
   main {
     position: relative;
     z-index: 1;
-    height: 100%;
+    min-height: 100%;
+    min-height: 100svh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -88,20 +110,58 @@
   }
 
   .tag {
-    margin-top: 1.6rem;
+    margin: 1.6rem 0 0;
     font-size: clamp(0.85rem, 1.6vw, 1rem);
     color: var(--fg-soft);
     max-width: 40ch;
     line-height: 1.5;
+  }
+  .tag blockquote, .tag blockquote p { margin: 0; }
+  .tag figcaption { margin-top: 0.25rem; }
+  .tag cite { font-style: normal; }
+
+  .links {
+    margin: 2.4rem 0 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 0.75rem;
+  }
+  .links a {
+    display: grid;
+    place-items: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 50%;
+    color: var(--fg-muted);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    transition: color .2s, border-color .2s, background-color .2s;
+  }
+  .links a:hover { color: var(--fg); border-color: rgba(255, 255, 255, 0.4); background: rgba(255, 255, 255, 0.06); }
+  .links a:focus-visible { outline: 2px solid var(--fg); outline-offset: 3px; }
+  .links svg { width: 1.15rem; height: 1.15rem; fill: currentColor; }
+  .sr-only {
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
   }
 </style>
 </head>
 <body>
   <div class="glow" aria-hidden="true"></div>
   <main>
-    <p class="name">Claudia Njanteng</p>
+    <h1 class="name">Claudia Njanteng</h1>
     <p class="role">Software Engineer</p>
-    <p class="tag">"Make something people want." ~ Paul Graham</p>
+    <figure class="tag">
+      <blockquote><p>“Make something people want.”</p></blockquote>
+      <figcaption>— <cite>Paul Graham</cite></figcaption>
+    </figure>
+    <nav aria-label="Social links">
+      <ul class="links">
+        <li><a href="https://x.com/njanteng" rel="me noopener" target="_blank"><span class="sr-only">X</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a></li>
+        <li><a href="https://github.com/njanteng" rel="me noopener" target="_blank"><span class="sr-only">GitHub</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.83 1.24 1.83 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .31.2.69.82.57A12 12 0 0 0 12 .3"/></svg></a></li>
+        <li><a href="https://www.linkedin.com/in/njanteng" rel="me noopener" target="_blank"><span class="sr-only">LinkedIn</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13M7.12 20.45H3.56V9h3.56zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0"/></svg></a></li>
+      </ul>
+    </nav>
   </main>
 </body>
 </html>
